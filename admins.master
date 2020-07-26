@@ -1,0 +1,137 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="admins.master.cs" Inherits="admins" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+    <title></title>
+     <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        #amenu
+        {
+            height: 149px;
+        }
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+     <div id="amenu" style=" width: 100%;" >
+  
+    <ul>
+    <li id="logo"> &nbsp;<asp:Image ID="Image3" runat="server" Height="70px" 
+            ImageUrl="~/apicon.jpg" /> 
+       <b><font color="black" style=" text-align: center; vertical-align: top;"><i>
+        &nbsp;&nbsp;
+        </i></font>
+        </b>&nbsp;&nbsp;
+       <b></li>
+    <li>
+        <asp:HyperLink ID="HyperLink1" runat="server" 
+              style="text-decoration:none;" NavigateUrl="~/ahome.aspx">HOME</asp:HyperLink></li>
+    <li>
+        <asp:HyperLink ID="HyperLink2" runat="server" 
+             style="text-decoration:none">MENU</asp:HyperLink>
+            <ul>
+            <li><asp:HyperLink ID="HyperLink6" runat="server" 
+             style="text-decoration:none" NavigateUrl="~/menuadd.aspx">ADD</asp:HyperLink></li>
+            <li><asp:HyperLink ID="HyperLink7" runat="server" 
+              style="text-decoration:none" NavigateUrl="~/modifymenu.aspx">MODIFY</asp:HyperLink></li>
+        </ul>
+            </li>
+        
+    <li>
+        <asp:HyperLink ID="HyperLink3" runat="server" 
+            style="text-decoration:none">ORDER</asp:HyperLink>
+              <ul>
+            <li><asp:HyperLink ID="HyperLink9" runat="server" 
+              style="text-decoration:none" NavigateUrl="~/order.aspx">ADD</asp:HyperLink></li>
+            <li><asp:HyperLink ID="HyperLink10" runat="server" 
+            style="text-decoration:none" NavigateUrl="~/vieworder.aspx">MODIFY</asp:HyperLink></li>
+             <li><asp:HyperLink ID="HyperLink17" runat="server" 
+            style="text-decoration:none" NavigateUrl="~/deleteorder.aspx">DELETE</asp:HyperLink></li>
+        </ul>
+            </li>
+    <li>
+        <asp:HyperLink ID="HyperLink4" runat="server" 
+             style="text-decoration:none">BILL</asp:HyperLink>
+            <ul>
+            <li><asp:HyperLink ID="HyperLink11" runat="server" 
+             style="text-decoration:none" NavigateUrl="~/modifybill.aspx">MODIFY</asp:HyperLink></li>
+            <li><asp:HyperLink ID="HyperLink12" runat="server" 
+              style="text-decoration:none" NavigateUrl="~/viewbill.aspx">VIEW</asp:HyperLink></li>
+        </ul>
+            </li>
+    <li>
+        <asp:HyperLink ID="HyperLink13" runat="server" 
+              style="text-decoration:none">CUSTOMER</asp:HyperLink>
+              <ul>
+            <li><asp:HyperLink ID="HyperLink14" runat="server" 
+            style="text-decoration:none" NavigateUrl="~/modifycustomer.aspx">MODIFY</asp:HyperLink></li>
+            <li><asp:HyperLink ID="HyperLink15" runat="server" 
+            style="text-decoration:none" NavigateUrl="~/modifybookings.aspx">BOOKINGS</asp:HyperLink></li>
+           
+             <li><asp:HyperLink ID="HyperLink16" runat="server" 
+            style="text-decoration:none" NavigateUrl="~/response.aspx">QUERIES</asp:HyperLink></li>
+            
+        </ul>
+            </li>
+     <li>
+        <asp:HyperLink ID="HyperLink5" runat="server" 
+              style="text-decoration:none">REPORT</asp:HyperLink>
+              <ul>
+            <li><asp:HyperLink ID="HyperLink25" runat="server" 
+            style="text-decoration:none" NavigateUrl="~/reportorder.aspx">ORDER</asp:HyperLink></li>
+            <li><asp:HyperLink ID="HyperLink26" runat="server" 
+            style="text-decoration:none" NavigateUrl="~/reportcancel.aspx">CANCEL</asp:HyperLink></li>
+           
+             <li><asp:HyperLink ID="HyperLink27" runat="server" 
+            style="text-decoration:none" NavigateUrl="~/reportbill.aspx">PAYMENT</asp:HyperLink></li>
+            
+        </ul>
+              </li>
+     <li>
+        <asp:HyperLink ID="HyperLink8" runat="server" 
+              style="text-decoration:none">SEARCH</asp:HyperLink>
+               <ul>
+            <li><asp:HyperLink ID="HyperLink18" runat="server" 
+            style="text-decoration:none" NavigateUrl="~/searchcustomer.aspx">CUSTOMER</asp:HyperLink></li>
+            <li><asp:HyperLink ID="HyperLink19" runat="server" 
+            style="text-decoration:none" NavigateUrl="~/searchbooking.aspx">BOOKINGS</asp:HyperLink></li>
+           
+             <li><asp:HyperLink ID="HyperLink20" runat="server" 
+            style="text-decoration:none" NavigateUrl="~/searchorder.aspx">ORDER</asp:HyperLink></li>
+            
+        </ul>
+              </li>
+    <li></li>
+    <li></li>
+     <li>
+        <asp:HyperLink ID="HyperLink21" runat="server" 
+              style="text-decoration:none">&nbsp;&nbsp;<img src="loginpic.png" height="20" width="25"/></asp:HyperLink>
+              <ul>
+            <li><asp:HyperLink ID="HyperLink22" runat="server" 
+            style="text-decoration:none" NavigateUrl="~/clogin.aspx">USER</asp:HyperLink></li>
+            
+            <li><asp:HyperLink ID="HyperLink23" runat="server" 
+            style="text-decoration:none" NavigateUrl="~/alogin.aspx">STAFF</asp:HyperLink></li>
+             <li><asp:HyperLink ID="HyperLink24" runat="server" 
+            style="text-decoration:none">
+                 <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" onclick="LinkButton1_Click">LOGOUT</asp:LinkButton></asp:HyperLink></li>
+            
+        </ul>
+        
+             
+            </li>
+    </ul>
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
